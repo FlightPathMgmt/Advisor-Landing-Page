@@ -1,0 +1,142 @@
+/* GiveWise Specific Styling & Overrides (Bootstrap Utility-First approach) */
+
+:root {
+    --gw-cyan: #64bee5;       /* GiveWise Cyan */
+    --gw-cyan-dark: #4ca7cc;
+    --gw-navy: #293860;       /* GiveWise Navy */
+    --gw-gold: #eccb48;       /* GiveWise Yellow */
+    --gw-coral: #e67453;      /* GiveWise Coral */
+    --gw-bg-accent: #ede4e4;  /* GiveWise Light Pink/Grey */
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #4A5568;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: -0.02em;
+}
+
+/* Custom Color Classes */
+.text-navy {
+    color: var(--gw-navy) !important;
+}
+
+.bg-navy {
+    background-color: var(--gw-navy) !important;
+}
+
+.text-cyan {
+    color: var(--gw-cyan) !important;
+}
+
+.bg-cyan {
+    background-color: var(--gw-cyan) !important;
+}
+
+.border-cyan {
+    border-color: var(--gw-cyan) !important;
+}
+
+/* Custom Buttons */
+.btn-cyan {
+    background-color: var(--gw-cyan);
+    border-color: var(--gw-cyan);
+    color: #fff;
+}
+
+.btn-cyan:hover, .btn-cyan:focus {
+    background-color: var(--gw-cyan-dark) !important;
+    border-color: var(--gw-cyan-dark) !important;
+    color: #fff !important;
+}
+
+.btn-outline-navy {
+    color: var(--gw-navy);
+    border-color: transparent;
+}
+.btn-outline-navy:hover {
+    color: var(--gw-cyan) !important;
+    background-color: transparent;
+}
+
+/* UI Elements */
+.step-circle {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Make GiveWise logo match existing branding size bounds */
+.navbar-brand img {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* -------------------------------------------
+   New Hero Swoop Elements & Gold Button Customizations 
+   ------------------------------------------- */
+
+.btn-gold {
+    background-color: var(--gw-gold) !important;
+    border-color: var(--gw-gold) !important;
+    color: #fff !important;
+}
+
+.btn-gold:hover, .btn-gold:focus {
+    background-color: #d8b736 !important;
+    border-color: #d8b736 !important;
+    color: #fff !important;
+}
+
+.hero-section {
+    display: flex;
+    align-items: center;
+}
+
+/* Base Swoop background */
+.swoop-bg {
+    position: absolute;
+    bottom: -30px;
+    right: 0;
+    width: 60%;
+    height: 105%;
+    /* Using a linear gradient blending into the light blue giving that native swoop look */
+    background: linear-gradient(to top right, #80d5f6 0%, var(--gw-cyan) 100%);
+    border-top-left-radius: 90% 100%;
+    z-index: 1;
+}
+
+.circle-grey {
+    position: absolute;
+    top: 5%;
+    right: 48%;
+    width: 250px;
+    height: 250px;
+    background-color: #F8F9FA;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.circle-yellow {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    width: 100px;
+    height: 100px;
+    background-color: var(--gw-gold);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Ensure the hero container sits strictly above the background graphics */
+.hero-section .container {
+    z-index: 4 !important;
+}
